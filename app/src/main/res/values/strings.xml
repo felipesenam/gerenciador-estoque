@@ -6,4 +6,9 @@
     <string name="password">Senha:</string>
     <string name="email_hint">E-Mail</string>
     <string name="password_hint">Senha</string>
+    <string name="menu_title">O que deseja fazer?</string>
+    <string name="create">Cadastrar produto</string>
+    <string name="list">Listar produtos</string>
+    <string name="update">Alterar produtos</string>
+    <string name="delete">Deletar produtos</string>
 </resources>

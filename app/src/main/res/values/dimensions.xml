@@ -2,4 +2,5 @@
 <resources>
     <dimen name="fontsize">20dp</dimen>
     <dimen name="form_margin">10dp</dimen>
+    <dimen name="main_menu_btn_margin">5dp</dimen>
 </resources>

@@ -86,7 +86,7 @@ public class Login extends Fragment {
                     FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                    fragmentTransaction.replace(R.id.fcContent, new ListView());
+                    fragmentTransaction.replace(R.id.fcContent, new MainMenu());
                     fragmentTransaction.commit();
                 }
             }

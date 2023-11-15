@@ -12,17 +12,6 @@ public class Product {
 
     }
 
-    @NonNull
-    @Override
-    public String toString() {
-        return "{" +
-                    "\"code\":\"" + this.code +"\"" +
-                    "\"name\":\"" + this.name + "\"" +
-                    "\"description\":\"" + this.description +"\"" +
-                    "\"quantity\":" + this.quantity.toString() +
-                "}";
-    }
-
     public String getCode(){
         return this.code;
     }
