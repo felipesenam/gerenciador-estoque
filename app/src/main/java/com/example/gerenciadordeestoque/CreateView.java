@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class ListView extends Fragment {
+public class CreateView extends Fragment {
 
-    public ListView() {
+    public CreateView() {
         // Required empty public constructor
     }
 
