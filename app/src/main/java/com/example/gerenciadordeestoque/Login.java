@@ -39,18 +39,7 @@ public class Login extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         Button login = view.findViewById(R.id.btnLogin);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(authenticate(view)) {
-                    FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-                    fragmentTransaction.replace(R.id.fcContent, new MainMenu());
-                    fragmentTransaction.commit();
-                }
-            }
-        });
+        ButtonHelper.setTargetFragment(login, this, new MainMenu(), false);
 
         return view;
     }

@@ -8,6 +8,13 @@ public class Product {
     private String description;
     private Integer quantity;
 
+    public Product(String code, String name, String description, Integer quantity){
+        this.quantity = quantity;
+        this.code = code;
+        this.name = name;
+        this.description = description;
+    }
+
     public Product(){
 
     }

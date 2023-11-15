@@ -22,7 +22,7 @@ public class UpdateView extends Fragment {
         View view = inflater.inflate(R.layout.fragment_create_view, container, false);
 
         Button btnBack = view.findViewById(R.id.btnBack);
-        ButtonHelper.setTargetFragment(btnBack, this, new MainMenu());
+        ButtonHelper.setBackButton(btnBack, this);
 
         return view;
     }

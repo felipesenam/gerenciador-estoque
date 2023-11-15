@@ -8,7 +8,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class ButtonHelper {
-    public static void setTargetFragment(Button button, final Fragment fragment, final Fragment target) {
+    public static void setTargetFragment(Button button, final Fragment fragment, final Fragment target){
+        setTargetFragment(button, fragment, target, true);
+    }
+
+    public static void setTargetFragment(Button button, final Fragment fragment, final Fragment target, boolean addToBackStack) {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -16,8 +20,21 @@ public class ButtonHelper {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 fragmentTransaction.replace(R.id.fcContent, target);
-                fragmentTransaction.addToBackStack(null);
+                if (addToBackStack) {
+                    fragmentTransaction.addToBackStack(null);
+                }
+
                 fragmentTransaction.commit();
+            }
+        });
+    }
+    public static void setBackButton(Button button, Fragment fragment){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment.requireActivity()
+                        .getOnBackPressedDispatcher()
+                        .onBackPressed();
             }
         });
     }

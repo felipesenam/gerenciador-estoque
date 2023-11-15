@@ -28,21 +28,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Login login;
+    public List<Product> products;
 
-    List<Product> products;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fcContent, new Login())
-                    .commit();
-        }
-
+    public void readProducts() {
         ObjectMapper mapper = new ObjectMapper();
 
         try {
@@ -57,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, content.toString(), Toast.LENGTH_SHORT).show();
             products = mapper.readValue(content.toString(), new TypeReference<List<Product>>() {});
 
-        } catch (FileNotFoundException | JsonProcessingException e) {
+        } catch (FileNotFoundException e) {
             try {
                 products = new ArrayList<>();
                 OutputStreamWriter ostream = new OutputStreamWriter(openFileOutput("db.json", Activity.MODE_PRIVATE));
@@ -68,6 +56,30 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void writeProducts() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            OutputStreamWriter stream = new OutputStreamWriter(openFileOutput("db.json", Activity.MODE_PRIVATE));
+            mapper.writeValue(stream, products);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fcContent, new Login())
+                    .commit();
+        }
+
+        readProducts();
 
         // Disable night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -79,12 +91,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            OutputStreamWriter stream = new OutputStreamWriter(openFileOutput("db.json", Activity.MODE_PRIVATE));
-            mapper.writeValue(stream, products);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        writeProducts();
     }
 }
