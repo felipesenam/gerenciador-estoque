@@ -33,7 +33,7 @@ public class CreateView extends Fragment {
 
     private void createProduct(){
         if (validateForm()) {
-            String code = etCode.getText().toString();
+            Integer code = Integer.valueOf(etCode.getText().toString());
             String description = etDescription.getText().toString();
             String name = etName.getText().toString();
             Integer quantity = Integer.valueOf(etQuantity.getText().toString());
@@ -41,7 +41,7 @@ public class CreateView extends Fragment {
             resetForm();
 
             MainActivity mainActivity = (MainActivity) getActivity();
-            mainActivity.products.add(new Product(code, description, name, quantity));
+            mainActivity.products.add(new Product(code, name, description, quantity));
             mainActivity.writeProducts();
 
             Toast.makeText(requireActivity(), getText(R.string.success_feedback), Toast.LENGTH_SHORT).show();

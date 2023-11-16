@@ -25,7 +25,7 @@ public class MainMenu extends Fragment {
         Button btnCreate = view.findViewById(R.id.btnCreate);
         ButtonHelper.setTargetFragment(btnCreate, this, new CreateView());
         Button btnList = view.findViewById(R.id.btnList);
-        ButtonHelper.setTargetFragment(btnList, this, new ListView());
+        ButtonHelper.setTargetFragment(btnList, this, new ProductsListView());
         Button btnUpdate = view.findViewById(R.id.btnUpdate);
         ButtonHelper.setTargetFragment(btnUpdate, this, new UpdateView());
         Button btnDelete = view.findViewById(R.id.btnDelete);

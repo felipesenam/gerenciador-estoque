@@ -16,7 +16,7 @@
     <string name="update">Alterar produtos</string>
     <string name="delete">Deletar produtos</string>
 
-    <!-- Create -->
+    <!-- Create | Detail -->
     <string name="code_label">Código do produto</string>
     <string name="name_label">Nome do produto</string>
     <string name="description_label">Descrição do produto</string>
@@ -24,6 +24,9 @@
     <string name="save_form">Salvar</string>
     <string name="invalid_form_feedback">Todos os campos são obrigatórios</string>
     <string name="success_feedback">Produto adicionado com sucesso</string>
+
+    <!-- list -->
+    <string name="list_title">Lista de produtos</string>
 
     <!-- common -->
     <string name="back">Voltar</string>

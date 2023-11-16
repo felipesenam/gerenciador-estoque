@@ -1,14 +1,15 @@
 package com.example.gerenciadordeestoque;
 
-import androidx.annotation.NonNull;
+import java.io.Serializable;
 
-public class Product {
-    private String code;
+public class Product implements Serializable {
+
+    private Integer code;
     private String name;
     private String description;
     private Integer quantity;
 
-    public Product(String code, String name, String description, Integer quantity){
+    public Product(Integer code, String name, String description, Integer quantity){
         this.quantity = quantity;
         this.code = code;
         this.name = name;
@@ -19,10 +20,10 @@ public class Product {
 
     }
 
-    public String getCode(){
+    public Integer getCode(){
         return this.code;
     }
-    public void setCode(String code){
+    public void setCode(Integer code){
         this.code = code;
     }
     public String getName(){

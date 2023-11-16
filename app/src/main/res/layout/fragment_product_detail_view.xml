@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailView">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/form_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/form_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductCode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/code_label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProductCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/form_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductDescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/form_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductQuantity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity_label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/form_margin"
+            android:text="@string/back" />
+
+    </LinearLayout>
+
+</FrameLayout>

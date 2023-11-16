@@ -45,17 +45,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, content.toString(), Toast.LENGTH_SHORT).show();
             products = mapper.readValue(content.toString(), new TypeReference<List<Product>>() {});
 
-        } catch (FileNotFoundException e) {
-            try {
-                products = new ArrayList<>();
-                OutputStreamWriter ostream = new OutputStreamWriter(openFileOutput("db.json", Activity.MODE_PRIVATE));
-                mapper.writeValue(ostream, products);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            products = new ArrayList<>();
         }
+        writeProducts();
     }
 
     public void writeProducts() {
