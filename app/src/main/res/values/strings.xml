@@ -31,4 +31,5 @@
     <!-- common -->
     <string name="back">Voltar</string>
     <string name="reset_form">Limpar</string>
+    <string name="delete_product">Deletar</string>
 </resources>
