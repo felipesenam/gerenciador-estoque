@@ -90,6 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/main_menu_btn_margin"
+                android:background="@color/secondary_color"
+                android:backgroundTint="@color/secondary_color"
                 android:text="@string/back" />
 
             <Button
@@ -98,6 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/main_menu_btn_margin"
                 android:layout_weight="1"
+                android:background="@color/secondary_color"
+                android:backgroundTint="@color/secondary_color"
                 android:text="@string/reset_form" />
 
             <Button
@@ -106,6 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/main_menu_btn_margin"
                 android:layout_weight="1"
+                android:background="@color/secondary_color"
+                android:backgroundTint="@color/secondary_color"
                 android:text="@string/save_form" />
 
         </LinearLayout>

@@ -99,6 +99,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/form_margin"
+            android:background="@color/secondary_color"
+            android:backgroundTint="@color/secondary_color"
             android:text="@string/back" />
 
     </LinearLayout>
